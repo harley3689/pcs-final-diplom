@@ -17,7 +17,7 @@ public class Main {
                      BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                      PrintWriter out = new PrintWriter(socket.getOutputStream());){
 
-                    System.out.println("Connection!");
+                    System.out.println("Connect!");
                     String word = in.readLine();
 
                     Gson gson = new GsonBuilder().create();
