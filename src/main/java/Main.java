@@ -1,6 +1,5 @@
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -17,7 +16,7 @@ public class Main {
                      BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                      PrintWriter out = new PrintWriter(socket.getOutputStream());){
 
-                    System.out.println("Connection!");
+                    System.out.println("Connect!");
                     String word = in.readLine();
 
                     Gson gson = new GsonBuilder().create();
