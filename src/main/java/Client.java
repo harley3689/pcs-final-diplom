@@ -18,7 +18,7 @@ public class Client {
              PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
              BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
 
-            String word = "бизнес, абсолютно";
+            String word = "Бизнес, абсолютно";
             out.println(word);
             String json = in.readLine();
             GsonBuilder builder = new GsonBuilder();

@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class BooleanSearchEngine implements SearchEngine {
-    Map<String, List<PageEntry>> answer = new HashMap<>();
+    protected Map<String, List<PageEntry>> answer = new HashMap<>();
 
     public BooleanSearchEngine(File pdfsDir) throws IOException {
 
@@ -53,7 +53,7 @@ public class BooleanSearchEngine implements SearchEngine {
                 stopWords.add(str);
             }
 
-            String[] words = word.split("\\P{IsAlphabetic}+");
+            String[] words = word.toLowerCase().split("\\P{IsAlphabetic}+");
             List<String> newWords = new ArrayList<>();
             for (String s : words) {
                 if (!stopWords.contains(s)) {
